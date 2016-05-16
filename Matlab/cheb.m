@@ -4,6 +4,7 @@ function T = cheb(n)
 	%2016
 
 	%Calculates the polynomial cooefficients for the Chebyshev-polinomials of degree 0 to n
+	%This works
 
 
 	if n < 0;

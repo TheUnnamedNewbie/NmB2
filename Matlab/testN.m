@@ -21,12 +21,14 @@ function result = testN(funct, n, a, b)
 	end
 	difference = zeros(1, 101); 
 	parfor i=1:101
-		difference(1, i) = resultsfunction(1, i) - result(1, i);
+		difference(1, i) = result(1, i)/resultsfunction(1, i);
 	end
 	figure
-	subplot(2, 1, 1)
+	subplot(3, 1, 1)
 	plot(values(1, g:f), resultsfunction(1, g:f), 'g', values(1, g:f), result(1, g:f), 'r');
-	subplot(2, 1, 2)
+	subplot(3, 1, 2)
 	plot(values(1, g:f), difference(1, g:f));
+	subplot(3, 1, 3)
+	plot(values(1, g:f), resultsfunction(1, g:f));
 	
 end
